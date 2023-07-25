@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Scraping App - Results</title>
+</head>
+<body>
+  <h1>Search Results for "<%= query %>"</h1>
+
+  <% if (textResults && textResults.length > 0) { %>
+    <% textResults.forEach((text) => { %>
+      <% text.forEach((t) => { %>
+        <p><%= t %></p>
+      <% }); %>
+      <hr>
+    <% }); %>
+  <% } else { %>
+    <p>No results found.</p>
+  <% } %>
+</body>
+</html>
